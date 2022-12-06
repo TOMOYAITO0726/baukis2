@@ -3,3 +3,11 @@ html, body{
   padding: 0;
   height: ;
 }
+div#wrapper{
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0auto;
+  padding-bottom: 480px;
+  background-color: #cccccc;
+}
