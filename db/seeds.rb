@@ -1,5 +1,4 @@
-table_names = %w(staff_members)
-table_names = %w(adminstrators)
+table_names = %w(staff_members adminstrators)
 
 table_names.each do |table_name|
   path = Rails.root.join("db", "seeds", Rails.env, "#{table_name}.rb")
