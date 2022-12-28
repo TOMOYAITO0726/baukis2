@@ -1,0 +1,4 @@
+class Staff::Authenticator
+  
+
+end  
