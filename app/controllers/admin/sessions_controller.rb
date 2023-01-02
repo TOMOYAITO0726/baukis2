@@ -13,7 +13,7 @@ class Admin::SessionsController < Admin::Base
     if @form.email.prsent?
       admin_member = AdminMember.find_by("LOWER(email) =?", @form.email.downcase)
     end
-    if admin_member
+    if Admin::Authenticator.new(admin_member).authenticate(@form.password)
       session[:admin_member_id] = admin_member.id
       redirect_to :admin_root
     else
