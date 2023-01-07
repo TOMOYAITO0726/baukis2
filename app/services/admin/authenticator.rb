@@ -4,7 +4,6 @@ class Admin::Authenticator
   end
   
   def authenticate(raw_password)
-   @administrator &&
      @administrator &&
        @administrator.hashed_password &&
        BCrypt::Password.new(@administrator.hashed_password) == raw_password
